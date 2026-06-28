@@ -3,6 +3,7 @@
 
 * make sure to add meta-git to your PATH
 * make sure to make a shortcut for sublimetext 🤣
+* make sure to make a shortcut for chrome 🤣
 * dont forget to make custom bats for minecraft 🤣
 
 ### example usage

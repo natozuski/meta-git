@@ -7,6 +7,7 @@ def create_bat_files(desktop_path, folder_names):
     Creates .bat files for each git folder:
     - folder.bat: navigates to the folder
     - folder_git.bat: navigates to the folder and runs git status and git pull
+    - git_pull.bat: navigates to all folders and runs git pull on each
     """
     
     # Validate desktop path
@@ -28,6 +29,8 @@ def create_bat_files(desktop_path, folder_names):
         return False
     
     # Create bat files for each valid folder
+    git_pull_content = []  # Will collect all git pull commands
+    
     for folder in valid_folders:
         folder_path = os.path.join(desktop_path, folder)
         
@@ -46,6 +49,20 @@ def create_bat_files(desktop_path, folder_names):
         with open(git_bat_filename, 'w') as f:
             f.write(git_bat_content)
         print(f"Created: {git_bat_filename}")
+        
+        # Add to git_pull.bat content
+        git_pull_content.append(f'cd "{folder_path}"')
+        git_pull_content.append('git status')
+        git_pull_content.append('git pull')
+        git_pull_content.append('')  # Empty line for separation
+    
+    # Create the master git_pull.bat file
+    git_pull_content.append('pause')  # Add pause at the end
+    git_pull_bat_content = '\n'.join(git_pull_content)
+    
+    with open('git_pull.bat', 'w') as f:
+        f.write(git_pull_bat_content)
+    print(f"Created: git_pull.bat (pulls all {len(valid_folders)} folders)")
     
     return True
 

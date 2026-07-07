@@ -20,6 +20,11 @@ to create shortcuts for primon_prime etc etc
 ### remember
 
 * make sure to add meta-git to your ```PATH```
-* make sure to make a shortcut for sublimetext 🤣 (with ```@echo off```)
 * make sure to make a shortcut for chrome 🤣
 * dont forget to make custom ```.bat```s for minecraft 🤣
+* make sure to make a shortcut for sublimetext 🤣 
+e.g.
+```
+@echo off
+start "" "C:\Program Files\Sublime Text\sublime_text.exe" %*
+```

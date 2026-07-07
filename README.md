@@ -13,7 +13,7 @@ Creates commandline shortcuts for git projects
 
 if ```meta-git``` is at ```C:\Users\USER\Desktop```, then run
 ```
-python create_git_bats.py "C:\Users\USER\Desktop" primon_prime ocarina alpha_trion sephiroth desktop-c meta-git website
+python create_git_bats.py "C:\Users\USER\Desktop" primon_prime prima_prime ocarina alpha_trion sephiroth desktop-c meta-git website
 ```
 to create shortcuts for primon_prime etc etc
 
